@@ -1,0 +1,2 @@
+#!/bin/bsdh
+chown --from=guillaume betty hello
