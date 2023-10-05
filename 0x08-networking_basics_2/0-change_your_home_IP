@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#A bash script that configures an UBUNTU server resolving
+#localhost to 127.0.0.2 and facebook to 8.8.8.8
+cp /etc/hosts ~/hosts.new
+	LOCALHOST_RESOLVE="127.0.0.2 localhost"
+	FACEBOOK_RESOLVE="8.8.8.8 facebook.com"
+echo "$LOCALHOST_RESOLVE" > ~/hosts.new
+echo "$FACEBOOK_RESOLVE" >> ~/hosts.new
+cp -f ~/hosts.new /etc/hosts
