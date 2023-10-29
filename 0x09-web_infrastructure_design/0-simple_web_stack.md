@@ -25,3 +25,14 @@ The role of the database is to store and manage data for the web application, al
 
 ## What is the server using to communicate with the computer of the user requesting the website
 In the above Web Infrastructure design, communication between the user (client) and the server occurs over the internet network through the TCP/IP protocol suite.
+
+# Issues we face with this Web Infrastructure Design
+
+## SPOF (Single Points of Failure)
+There are multiple SPOF's. Any web server failure may lead to complete service outage. Nginx (which serves as an entry point for HTTP/HTTPS requests) failure may disrupt access. Application Server Failure would render the application unavailable and MySQL Database Server failure will render data inaccessible which would lead to the web application not functioning properly.
+
+## Downtime
+Any form of maintenance will lead to downtime and if maintenance leads to unexpected issues or complications, downtime can be prolonged until the problems are resolved.
+
+## Scalability
+It would be difficult to scale this infrastructure because one server contains the required components. the server can run out of resources or slow down if there is an increase of incoming requests
