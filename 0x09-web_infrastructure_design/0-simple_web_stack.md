@@ -1,4 +1,5 @@
-https://lucid.app/lucidspark/b50288c9-d250-4e34-a5db-9e6f6c5cce7d/edit?viewport_loc=-520%2C-39%2C2046%2C1123%2C0_0&invitationId=inv_9709eab9-3c9f-40c4-bfd7-6b5d45e5e4ce
+
+![0-simple_web_stack](https://github.com/NokzB/alx-system_engineering-devops/assets/111048884/a95c55eb-eab5-4c3a-9916-320c408e8c7b)
 
 # Description
 A simple web stack design that hosts the website reachable by typing www.foobar.com in any search engine
