@@ -10,3 +10,11 @@ A server is a computer or software system that provides services, data, or resou
 
 ## The role of the domein name
 A domain name acts as a user-friendly "pointer" to the specific location of web content or services on the internet. It helps translate that name into an IP address, which is the actual numerical address used by computers to locate and connect to web servers.
+
+## What type of DNS record www is in www.foobar.com
+In this design, it is an A (Address) record since it stores the hostname and its corresponsing IPv4 Address.
+
+## What is the role of the Web Server
+The web server's role is to handle client HTTP/HTTPS requests and respond by either loading the requested webpage or returning an error message
+
+## What is the role of the Application Server
