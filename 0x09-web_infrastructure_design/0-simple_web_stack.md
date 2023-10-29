@@ -18,3 +18,10 @@ In this design, it is an A (Address) record since it stores the hostname and its
 The web server's role is to handle client HTTP/HTTPS requests and respond by either loading the requested webpage or returning an error message
 
 ## What is the role of the Application Server
+The role of application server is to run the software application's code, processes client requests, and communicates with other components like databases to deliver dynamic content to end-users.
+
+## What is the role of the Database
+The role of the database is to store and manage data for the web application, allowing it to retrieve, update, and organize information for use in web pages and services.
+
+## What is the server using to communicate with the computer of the user requesting the website
+In the above Web Infrastructure design, communication between the user (client) and the server occurs over the internet network through the TCP/IP protocol suite.
