@@ -1,3 +1,8 @@
+# Secured and Monitored Web Infrastructure
+![2-secured_and_monitored_web_infrastructure](https://github.com/NokzB/alx-system_engineering-devops/assets/111048884/29f3d744-1750-44dd-bb45-efb57a1a66b5)
+
+
+
 # Description
 This is a 3-server web infrastructure that is secured, monitored, and serves encrypted traffic.
 
