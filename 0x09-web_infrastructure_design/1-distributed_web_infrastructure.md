@@ -1,3 +1,6 @@
+# Distributed Web Infrastructure
+![1-distributed_web_infrastructure](https://github.com/NokzB/alx-system_engineering-devops/assets/111048884/b482065d-8732-46d6-81e7-b3f13cff3f79)
+
 
 # Description
 This is a distributed web infrastructure which atttempts to reduce the traffic to the primary server by distributing the load to a replica server with the aid of a server responsible for balancing the load between the two servers (primary and replica).
@@ -22,7 +25,7 @@ The Primary node is responsible for all the write operations the site needs whil
 There are multiple SPOF (Single Point Of Failure).
 For example, if the Primary MySQL database server is down, the entire site would be unable to make changes to the site (including adding or removing users). The server containing the load balancer and the application server connecting to the primary database server are also SPOFs.
 
-## Security issues.
+# Security issues.
 
 The data transmitted over the network isn't encrypted using an SSL certificate so hackers can spy on the network. There is no way of blocking unauthorized IPs since there's no firewall installed on any server.
 
