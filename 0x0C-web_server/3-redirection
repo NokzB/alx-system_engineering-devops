@@ -3,8 +3,15 @@
 
 sudo apt-get update
 sudo apt-get install -y nginx
-sudo ufw allow 'Nginx HTTP'
-sudo chown -R ubuntu /var/www
-echo "Hello World!" > /var/www/html/index.nginx-debian.html
-sudo sed -i '/listen 80 default_server/ rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
+
+# Create a simple HTML file
+echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html > /dev/null
+
+# Define the redirection configuration
+redirect_config="location /redirect_me {\n\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n}"
+
+# Add the redirection configuration to the default Nginx site
+sudo sed -i "53s $redirect_config" /etc/nginx/sites-available/default
+
+# Restart Nginx to apply changes
 sudo service nginx restart
