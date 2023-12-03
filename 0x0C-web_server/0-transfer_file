@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-
 # script to transfer a file from client to server
+# accepts 4 params (filepath, IP of server, username & path for ssh priv key)
 
 if [ "$#" -lt 4 ]
 then
