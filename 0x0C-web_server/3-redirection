@@ -8,7 +8,7 @@ sudo tee /etc/nginx/sites-available/redirect_me <<EOL
 server {
 	listen 80;
 
-	server_name 54.237.4.187;
+	server_name _;
 
 	location /redirect_me {
 		return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
@@ -16,7 +16,6 @@ server {
 }
 EOL
 sudo ln -s /etc/nginx/sites-available/redirect_me /etc/nginx/sites-enabled/
-sudo nginx -t
 
 # Restart Nginx to apply changes
 sudo service nginx restart
