@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # script to redirect 301 to a given url
 
 echo "Updating system"
