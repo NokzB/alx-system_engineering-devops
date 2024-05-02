@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+# Script to install and configure HAProxy
+
+sudo apt-get update
+sudo apt-get install -y haproxy
+
+# Configuring HAProxy
+cat << EOF > /etc/haproxy/haproxy.cfg
+global
+        daemon
+        maxconn 3000
+
+defaults
+        mode http
+        timeout connect 10s
+        timeout client 30s
+        timeout server 30s
+        timeout http-request 30s
+
+frontend
+        bind *:80
+        default_backend my_servers
+
+backend my_servers
+        balance roundrobin
+        server 97843-web-01 18.204.7.132:80 check
+        server 97843-web-02 54.210.147.220:80 check
+EOF
+
+#Hostname Configuration
+echo "18.204.7.132" > /etc/hostname
+echo "54.210.168.166" >> /etc/hostname
+
+#Enabling HAProxy init script
+sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/haproxy
+
+echo "\n Starting HAProxy"
+sudo /etc/init.d/haproxy start
