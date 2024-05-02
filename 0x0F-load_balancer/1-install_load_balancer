@@ -2,12 +2,14 @@
 # Script to install and configure HAProxy
 
 sudo apt-get update
-sudo apt-get install -y haproxy
+sudo apt-get install haproxy -y
 
 # Configuring HAProxy
 cat << EOF > /etc/haproxy/haproxy.cfg
 global
-        daemon
+        user haproxy
+	group haproxy
+	daemon
         maxconn 3000
 
 defaults
