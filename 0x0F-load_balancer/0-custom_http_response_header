@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# This script adds a custom header to help identify which server is handling requests
+
+GREETING="Hello World!"
+STRING="Ceci nést pas une page"
+
+sudo apt-get update
+sudo apt-get install -y nginx
+sudo ufw allow 'Nginx HTTP' #listening on port 80
+sudo chown -R ubuntu /var/www
+echo "$GREETING" > /var/www/html/index.nginx-debian.html
+sudo sed -i '24i\       rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
+echo "$STRING" >> /var/www/html/custom_404.html
+sudo sed -i '25i\       error_page 404 /custom_404.html;' /etc/nginx/sites-available/default
+sudo sed -i '26i\       add_header X-Served-By $hostname;' /etc/nginx/sites-available/default
+sudo service nginx restart
