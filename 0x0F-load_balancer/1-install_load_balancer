@@ -35,4 +35,4 @@ echo "54.210.168.166" >> /etc/hostname
 
 #Enabling HAProxy init script
 sudo service haproxy restart
-sudo service enable haproxy
+sudo service haproxy enable
