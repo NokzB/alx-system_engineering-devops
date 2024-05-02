@@ -32,7 +32,5 @@ echo "18.204.7.132" > /etc/hostname
 echo "54.210.168.166" >> /etc/hostname
 
 #Enabling HAProxy init script
-sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/haproxy
-
-echo "\n Starting HAProxy"
-sudo /etc/init.d/haproxy start
+sudo service haproxy restart
+sudo service enable haproxy
