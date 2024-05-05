@@ -29,10 +29,6 @@ backend my_servers
         server 97843-web-02 54.210.147.220:80 check
 EOF
 
-#Hostname Configuration
-echo "18.204.7.132" > /etc/hostname
-echo "54.210.168.166" >> /etc/hostname
-
 #Enabling HAProxy init script
 sudo service haproxy restart
 sudo service haproxy enable
